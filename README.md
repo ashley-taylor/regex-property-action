@@ -10,6 +10,6 @@
         regex: ".*/"
         replacement: ""
     - name: branch
-      run: branch "${{ steps.branch.outputs.value }}"
+      run: echo "${{ steps.branch.outputs.value }}"
 ``` 
    
