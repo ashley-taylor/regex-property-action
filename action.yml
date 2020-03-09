@@ -1,5 +1,8 @@
 name: 'Regex Replace'
 description: 'Allows you to perform a regex replace within the action script'
+branding:
+  icon: 'box'  
+  color: 'green'
 inputs:
   value:
     description: 'input string to apply regex to'
