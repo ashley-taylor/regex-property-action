@@ -4,7 +4,7 @@
 ```
     - name: Name of branch
       id: branch
-      uses: ashley-taylor/regex-property-action@v1.0
+      uses: ashley-taylor/regex-property-action@v1.2
       with:
         value: ${{ github.ref }}
         regex: ".*/"
