@@ -1,13 +1,13 @@
-const core = require('@actions/core');
+import { getInput, setOutput, setFailed } from '@actions/core';
 
 try {
-  const value = core.getInput('value');
-  const regex = core.getInput('regex');
-  const flags = core.getInput('flags');
-  const replacement = core.getInput('replacement');
+  const value = getInput('value');
+  const regex = getInput('regex');
+  const flags = getInput('flags');
+  const replacement = getInput('replacement');
 
   const re = new RegExp(regex, flags);
-  core.setOutput("value", value.replace(re, replacement));
+  setOutput("value", value.replace(re, replacement));
 } catch (error) {
-  core.setFailed(error.message);
+  setFailed(error.message);
 }
