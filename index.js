@@ -7,7 +7,7 @@ try {
   const replacement = getInput('replacement');
 
   const re = new RegExp(regex, flags);
-  setOutput("value", value.replace(re, replacement));
+  setOutput('value', value.replace(re, replacement));
 } catch (error) {
   setFailed(error.message);
 }
