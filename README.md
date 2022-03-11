@@ -1,15 +1,17 @@
-# regex-property-action
+# Regex Replace
+
+Implements JavaScript [replace()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) method.
 
 ## Example
-```
-    - name: Name of branch
+```yml
+    - name: Regex Replace
       id: branch
       uses: ashley-taylor/regex-property-action@v1.2
       with:
-        value: ${{ github.ref }}
-        regex: ".*/"
+        value: "Hello, world!"
+        regex: "world"
         flags: "" # Optional, defaults to "g"
-        replacement: ""
+        replacement: "universe"
     - name: branch
       run: echo "${{ steps.branch.outputs.value }}"
 ``` 
