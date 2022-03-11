@@ -23,4 +23,4 @@ outputs:
     description: string with the replaced text
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'dist/index.js'
