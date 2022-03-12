@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
-    "package": "ncc build index.js -m"
+    "build": "ncc build index.js -m"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
     "@actions/core": "^1.6.0"
   },
   "devDependencies": {
-    "jest": "^27.5.1",
-    "ncc": "^0.3.6"
+    "@vercel/ncc": "^0.33.3",
+    "jest": "^27.5.1"
   }
 }
