@@ -1,26 +1,26 @@
 name: Regex Replace
 description: Allows you to perform a regex replace within the action script
 branding:
-  icon: 'box'  
+  icon: 'type'  
   color: 'green'
 inputs:
   value:
-    description: The string apply replace to
+    description: The string to apply replace to
     required: true
   regex:
-    description: The text of the regular expression pattern
+    description: The text of the regex pattern
     required: true
   flags:
-    description: flags of the regex
+    description: Flags for the regex
     default: g
     required: false
   replacement:
-    description: string that replaces the substring specified by the regexp
+    description: String that replaces the substring specified by the regex
     default: "$1"
     required: true
 outputs:
   value:
-    description: string with the replaced text
+    description: String with the replaced text
 runs:
   using: 'node16'
   main: 'dist/index.js'
