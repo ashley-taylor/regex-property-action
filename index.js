@@ -1,4 +1,4 @@
-import { getInput, setOutput, setFailed } from '@actions/core';
+const { getInput, setOutput, setFailed } = require('@actions/core');
 
 try {
   const value = getInput('value');
