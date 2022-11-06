@@ -1,8 +1,8 @@
 name: Regex Replace
 description: Allows you to perform a regex replace within the action script
 branding:
-  icon: 'type'  
-  color: 'green'
+  icon: type
+  color: green
 inputs:
   value:
     description: The string to apply replace to
@@ -22,5 +22,5 @@ outputs:
   value:
     description: String with the replaced text
 runs:
-  using: 'node16'
-  main: 'dist/index.js'
+  using: node16
+  main: dist/index.js
