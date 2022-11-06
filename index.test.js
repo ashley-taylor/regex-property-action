@@ -3,6 +3,9 @@ const cp = require('node:child_process');
 const { expect, test } = require('@jest/globals');
 
 test('test run', () => {
+    // This exists in CICD and shortcuts the STDOUT execution if it is truthy.
+    process.env['GITHUB_OUTPUT'] = ''
+
     process.env['INPUT_VALUE'] = 'Hello, world!';
     process.env['INPUT_REGEX'] = 'world';
     process.env['INPUT_FLAGS'] = 'g';
