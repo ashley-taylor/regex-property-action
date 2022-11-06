@@ -9,5 +9,7 @@ try {
   const re = new RegExp(regex, flags);
   setOutput('value', value.replace(re, replacement));
 } catch (error) {
+  console.error(`An error has occurred: ${error.message}`);
+  console.error(error.stack);
   setFailed(error.message);
 }
