@@ -1,6 +1,6 @@
-const path = require('path');
-const cp = require('child_process');
-const { expect } = require('@jest/globals');
+const path = require('node:path');
+const cp = require('node:child_process');
+const { expect, test } = require('@jest/globals');
 
 test('test run', () => {
     process.env['INPUT_VALUE'] = 'Hello, world!';
