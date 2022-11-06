@@ -7,7 +7,7 @@ Implements JavaScript [replace()](https://developer.mozilla.org/en-US/docs/Web/J
 ```yml
 - name: Find & Replace
   id: hello
-  uses: ashley-taylor/regex-property-action@v1.2
+  uses: ashley-taylor/regex-property-action@v1.3
   with:
     value: "Hello, world!"
     regex: "world"
