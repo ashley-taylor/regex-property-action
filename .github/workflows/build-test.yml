@@ -27,3 +27,9 @@ jobs:
       - run: npm install
       - run: npm run build
       - run: npm test
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          title: New build
+          branch: auto-build
+          delete-branch: true
