@@ -1,4 +1,4 @@
-name: Build & Test
+name: Test Build
 
 on:
   pull_request:
@@ -7,22 +7,34 @@ on:
   push:
     paths-ignore:
       - "**.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   build:
-    name: Lint/Build/Test
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        node: ["14", "16", "18"]
+        node: ["20"]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+
       - name: Setup Node.js ${{ matrix.node }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-      - run: npm i -g npm@latest
-      - run: npm install
-      - run: npm run build
+
+      - name: Install dependencies with NPM
+        run: |
+          npm i -g npm@latest
+          npm install
+
+      - name: Build new release
+        run: npm run build
+
       - run: npm test
+        name: Run tests with NPM
