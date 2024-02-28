@@ -1,4 +1,4 @@
-name: Build & Test
+name: Test Build
 
 on:
   pull_request:
@@ -38,10 +38,3 @@ jobs:
 
       - run: npm test
         name: Run tests with NPM
-
-      - name: Open pull request with changes
-        uses: peter-evans/create-pull-request@v6
-        with:
-          title: New build
-          branch: auto-build
-          delete-branch: true
