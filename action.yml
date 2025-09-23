@@ -22,5 +22,5 @@ outputs:
   value:
     description: String with the replaced text
 runs:
-  using: node16
+  using: node20
   main: dist/index.js
